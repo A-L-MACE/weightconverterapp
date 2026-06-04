@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center_horizontal">
+
+    <!-- The App Title -->
+    <!-- Displays the main heading of the app, at the top of the screen -->
+    <TextView
+        android:text="Weight Converter"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- Input Field -->
+    <!-- User enters the numeric value to be converted -->
+    <EditText
+        android:id="@+id/editTextInput"
+        android:hint="Enter a value: "
+        android:inputType="numberDecimal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp" />
+
+    <!-- 'From' Unit Spinner -->
+    <!-- Dropdown menu for selecting the unit to convert from -->
+    <Spinner
+        android:id="@+id/spinnerFrom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp" />
+
+    <!-- 'To' Spinner -->
+    <!-- Dropdown menu for selecting the unit to convert to -->
+    <Spinner
+        android:id="@+id/spinnerTo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Convert Button -->
+    <!-- Performs the conversion when clicked -->
+    <Button
+        android:id="@+id/btnConvert"
+        android:text="Convert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Results Field -->
+    <!-- Displays the converted value (read-only) -->
+    <EditText
+        android:id="@+id/editTextResult"
+        android:hint="Result"
+        android:enabled="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Utilisation Buttons (Clear & Swap) -->
+    <!-- Horizontal layout containing two control buttons -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <!-- Clears all input and result fields -->
+        <Button
+            android:id="@+id/btnClear"
+            android:text="Clear"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp" />
+
+        <!-- Swaps the selected 'from' and 'to' units -->
+        <Button
+            android:id="@+id/btnSwap"
+            android:text="Swap Units"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>
